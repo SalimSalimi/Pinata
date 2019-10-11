@@ -9,7 +9,6 @@ static int nb;
 
 int main()
 {
-	int b = 1;
 	VideoCapture cap(0);
 	Mat img = imread("pinata.png");
 	//Mat img = imread("pinata.png", IMREAD_UNCHANGED);
@@ -22,8 +21,7 @@ int main()
 	}
 	cap.set(CAP_PROP_FRAME_WIDTH, 1200);
 	cap.set(CAP_PROP_FRAME_HEIGHT, 850);
-	int a = 50;
-	int c = 15;
+
 	while (1) {
 		Mat frame;
 		cap >> frame;
@@ -41,9 +39,5 @@ int main()
 
 		char c = (char)waitKey(1);
 		if (c == 27) break;
-		int i = 0;
-		while (i < 5000) {
-			i++;
-		}
 	}
 }
